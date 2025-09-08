@@ -11,6 +11,7 @@
 		187015622E6EB8D1004F268E /* SlideMenuViewController.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 187015602E6EB8D1004F268E /* SlideMenuViewController.xcdatamodeld */; };
 		187015642E6EB8D1004F268E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187015632E6EB8D1004F268E /* ContentView.swift */; };
 		1870158F2E6EBB69004F268E /* SlideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870158E2E6EBB69004F268E /* SlideMenuViewController.swift */; };
+		187015912E6EBC47004F268E /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187015902E6EBC47004F268E /* Folder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		1870156F2E6EB8D3004F268E /* SlideMenuViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlideMenuViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		187015792E6EB8D3004F268E /* SlideMenuViewControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlideMenuViewControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1870158E2E6EBB69004F268E /* SlideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenuViewController.swift; sourceTree = "<group>"; };
+		187015902E6EBC47004F268E /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -89,6 +91,7 @@
 				1870155C2E6EB8D1004F268E /* SlideMenuViewControllerApp.swift */,
 				187015632E6EB8D1004F268E /* ContentView.swift */,
 				1870158E2E6EBB69004F268E /* SlideMenuViewController.swift */,
+				187015902E6EBC47004F268E /* Folder.swift */,
 				187015602E6EB8D1004F268E /* SlideMenuViewController.xcdatamodeld */,
 				1870155B2E6EB8D1004F268E /* SlideMenuViewController */,
 				187015722E6EB8D3004F268E /* SlideMenuViewControllerTests */,
@@ -255,6 +258,7 @@
 				1870155D2E6EB8D1004F268E /* SlideMenuViewControllerApp.swift in Sources */,
 				187015642E6EB8D1004F268E /* ContentView.swift in Sources */,
 				187015622E6EB8D1004F268E /* SlideMenuViewController.xcdatamodeld in Sources */,
+				187015912E6EBC47004F268E /* Folder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
