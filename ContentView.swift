@@ -9,6 +9,7 @@ import SwiftUI
 import CoreData
 import UIKit
 
+// 2️⃣ SwiftUIから呼ぶRepresentable
 struct SlideMenuControllerRepresentable: UIViewControllerRepresentable {
 
     func makeUIViewController(context: Context) -> UIViewController {
@@ -17,9 +18,8 @@ struct SlideMenuControllerRepresentable: UIViewControllerRepresentable {
 
         let width: CGFloat = 250
 
-        // SlideMenu
-        let slideMenuVC = UIViewController()
-        slideMenuVC.view.backgroundColor = .systemGray
+        // SlideMenuを分ける
+        let slideMenuVC = SlideMenuViewController()
         slideMenuVC.view.frame = CGRect(x: -width, y: 0, width: width, height: UIScreen.main.bounds.height)
         containerVC.addChild(slideMenuVC)
         containerVC.view.addSubview(slideMenuVC.view)
@@ -33,11 +33,6 @@ struct SlideMenuControllerRepresentable: UIViewControllerRepresentable {
         containerVC.view.insertSubview(overlay, belowSubview: slideMenuVC.view)
         context.coordinator.overlay = overlay
 
-        // サンプルラベル
-        let label = UILabel(frame: CGRect(x: 20, y: 100, width: 200, height: 40))
-        label.text = "Slide Menu"
-        slideMenuVC.view.addSubview(label)
-
         // UIKitボタンで開閉
         let toggleButton = UIButton(type: .system)
         toggleButton.frame = CGRect(x: 50, y: 50, width: 120, height: 50)
@@ -48,7 +43,7 @@ struct SlideMenuControllerRepresentable: UIViewControllerRepresentable {
         toggleButton.addTarget(context.coordinator, action: #selector(Coordinator.toggleMenu), for: .touchUpInside)
         containerVC.view.addSubview(toggleButton)
 
-        // 左端からスワイプで開くジェスチャー
+        // 左端スワイプで開く
         let edgeSwipe = UIScreenEdgePanGestureRecognizer(target: context.coordinator, action: #selector(Coordinator.handleEdgeSwipe(_:)))
         edgeSwipe.edges = .left
         containerVC.view.addGestureRecognizer(edgeSwipe)
@@ -58,9 +53,7 @@ struct SlideMenuControllerRepresentable: UIViewControllerRepresentable {
 
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) { }
 
-    func makeCoordinator() -> Coordinator {
-        Coordinator()
-    }
+    func makeCoordinator() -> Coordinator { Coordinator() }
 
     class Coordinator: NSObject {
         weak var slideMenuVC: UIViewController?
